@@ -491,9 +491,9 @@ footer {
 
     nav ul {
         align-items: flex-start;
-        gap: 1.4rem;
+        gap: 1.9rem;
         overflow: hidden;
-        padding-right: 30px;
+        padding-right: 26px;
     }
     * {
         overflow-x: hidden;
