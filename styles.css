@@ -70,6 +70,9 @@ nav ul li a {
     margin: auto;
     overflow:hidden;
 }
+h1 {
+    font-size: 2rem;
+}
 
 /* Download button styling */
 .download-btn {
@@ -79,9 +82,21 @@ nav ul li a {
     background-color: #333;
     color: #fff;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 25px;
     text-align: center;
-    transition: background-color 0.3s ease;
+    animation: pulse 3s infinite;
+    transition: transform 0.2s ease;
+}
+@keyframes pulse {
+    0% {
+        transform: scale(0.5);
+    }
+    50% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0.5);
+    }
 }
 
 .download-btn:hover {
@@ -104,6 +119,7 @@ nav ul li a {
     border-radius: 6px;
     box-shadow: 0px 2px 15px 2px grey;
     background-color: rgb(255, 255, 255);
+    animation: slide 1s ease;
 }
 
 .aboutme h2 {
@@ -191,6 +207,18 @@ nav ul li a {
     width: 60%;
     border: 2px solid rgb(48, 47, 47);
     box-shadow: 0 0 10px  white ;
+    animation: zoomDown 1.5s ease forwards;
+    transform: scale(1.5);
+}
+@keyframes zoomDown {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 .projects h3 {
     color: white;
@@ -253,7 +281,7 @@ section {
 .icons {
     display: flex;
     justify-content: center;
-    gap: 50px;
+    gap: 5px;
     margin-top: 30px;
 }
 #skills ul {
@@ -265,113 +293,29 @@ section {
 #skills ul li {
     display: inline-block;
     margin: 10px 10px;
-    font-size: 18px;
+    font-size: 20px;
     background: #ddd;
     padding: 10px 20px;
     border-radius: 5px;
+    border: 1px solid transparent;
+    box-shadow: 0 0 10px #085653;
+    animation: slide 1s ease-in-out;
+    transition: transform 0.1s ease;
+    font-weight: bold;
 }
-
-/* Portfolio section styling */
-#portfolio {
-    position: relative;
-    z-index: 1;
-    background-color: #f3faaf;
-    padding: 32px 0;
-    height: auto;
-}
-@keyframes zoomDown {
+@keyframes slide {
     0% {
-        transform: scale(0.5);
-        opacity: 0;
+        transform: translateX(-90%);
     }
     100% {
-        transform: scale(1);
-        opacity: 1;
+        transform: translateX(0%);
     }
-}
-
-.portfolio-items {
-    display: flex;
-    margin-top: 30px;
-    justify-content: space-between;
-    gap: 20px; /* Adjust the gap as needed */
-}
-
-.portfolio-item {
-    background: #fff;
-    height: 80%;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    width: calc(33.333% - 30px); /* Adjust width and spacing as needed */
-    box-sizing: border-box;
-    border-top-right-radius: 50px;
-    border-bottom-left-radius: 30px;
-    text-align: center;
-    height: 350px;
-    animation: zoomDown 1.5s ease forwards;
-    transform: scale(1.5);
-}
-
-
-.port {
-    font-family: Sen,sans-srif;
-    font-size: 1.1rem;
-    line-height: 1.9;
-    letter-spacing: 1.5px;
-    padding: 60px 90px;
-    margin-left: 60px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-indent: -1.4em;
-    width: 70%;
 }
 
 img {
     width: 85%;
     height: 70%;
     
-}
-#portfolio h2 {
-    width: 100%;
-    align-items: center;
-    text-transform: uppercase;
-    text-decoration: underline;
-    text-decoration-color: #a15414;
-    text-underline-offset: 6px;
-    justify-content: center;
-    display: flex;
-    padding-top: 20px;
-    
-}
-
-.portfolio-item a {
-    color: #185797;
-    text-decoration: none;
-    padding: 30px 20px;
-    border-radius: 5px;
-    display: inline-block;
-    transition: transform 0.2s ease-in-out;
-    animation: pulse 2s infinite;
-    font-family: serif;
-    font-weight: bold;
-}
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.2);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-.portfolio-item a:hover {
-    color: #972f18;
-}
-.portfolio-item a i {
-    padding-left: 10px;
 }
 
 #contact {
@@ -524,7 +468,17 @@ footer {
         padding: 0 ;
         overflow-x: hidden;
     }
-    
+    #about #skills #projects {
+        position: relative;
+        z-index: 1;
+    }
+    #contact {
+        position: sticky;
+        bottom: 0;
+        top: 0;
+        z-index: 0;
+        display: flex;
+    }
 
     nav {
         
@@ -537,15 +491,19 @@ footer {
 
     nav ul {
         align-items: flex-start;
-        gap: 0.9rem;
+        gap: 1.4rem;
         overflow: hidden;
-        
+        padding-right: 26px;
     }
     * {
         overflow-x: hidden;
     }
     nav li {
         font-family: sen;
+    }
+    nav li a:hover {
+        box-shadow: 0px 1px 10px #95e4f1;
+        color: #448993;
     }
 
     #about {
@@ -587,31 +545,34 @@ footer {
     #skills ul li {
         font-size: 16px;
         padding: 5px 10px;
+        border-color: #3fbacd;
+        box-shadow: 0 0 10px #3fbacd;
     }
-
-    #portfolio h2, #skills h2 {
-        font-size: 1em;
-    }
-
-    .portfolio-items {
-        flex-direction: column;
-        align-items: center;
-        overflow: hidden;
-    }
-
-    .portfolio-item {
+    #projects img {
         width: 90%;
-        transform: scale(1);
+        height: 100%;
     }
-    .port {
-        font-size: 0.9rem;
-        margin: 0;
+    #projects p {
+        width: 100%;
+    }
+
+    #projects h4  {
+        font-size: 23px;
+        width: 100%;
         display: flex;
-        overflow: hidden;
+        flex-direction: row;
     }
 
+    #projects h4 i {
+       font-size: 25px;
+    }
     form {
-        width: 90%;
+        width: 80%;
+        position: sticky;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 0;
     }
 
     .socials {
