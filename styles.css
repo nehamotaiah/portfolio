@@ -493,7 +493,7 @@ footer {
         align-items: flex-start;
         gap: 1.4rem;
         overflow: hidden;
-        padding-right: 26px;
+        padding-right: 30px;
     }
     * {
         overflow-x: hidden;
