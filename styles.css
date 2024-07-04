@@ -1,0 +1,624 @@
+/* Reset some basic elements */
+body, h1, h2, h3, p, ul, li, a, form, label, input, textarea, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and container styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #ffffff;
+    color: #333;
+    
+}
+
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+
+nav {
+    position: sticky;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 10px 30px 10px 10px;
+    background-color: white;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+}
+
+nav ul {
+    list-style: none;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+    unicode-bidi: isolate;
+    display: flex;
+    gap: 2rem
+}
+
+nav ul li {
+    display: inline;
+    margin: 0;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+
+.intro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 100%;
+    width: 100%;
+    margin: auto;
+    overflow:hidden;
+}
+
+/* Download button styling */
+.download-btn {
+    display: inline-block;
+    margin-top: 50px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.download-btn:hover {
+    background-color: #555;
+}
+
+.me {
+    width: 80%;
+    align-items: center;
+    padding-bottom: 80px;
+    padding-inline-start: 200px;
+}
+
+.aboutme {
+    width: 50%;
+    margin-top: 10px;
+    margin-right: 90px;
+    padding: 0.625rem 1rem;
+    align-items: center;
+    border-radius: 6px;
+    box-shadow: 0px 2px 15px 2px grey;
+    background-color: rgb(255, 255, 255);
+}
+
+.aboutme h2 {
+        display: block;
+        font-size: 1.5em;
+        margin-block-start: 0.83em;
+        margin-block-end: 0.83em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        font-weight: bold;
+        unicode-bidi: isolate;
+    }
+.aboutme p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+}
+
+#about, #skills {
+    position: relative;
+    z-index: 1;
+    background-color: #fff;
+ }
+ #about {
+    background-color: #d2f8fd;
+    height: 400px;
+ }
+
+ /* projects section styling*/
+.projects {
+    background-color: rgb(14, 15, 15);
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    height: auto;
+}
+.projects h2 {
+    color: #f3f7cf;
+    font-family: sen;
+    text-align: center;
+    padding: 20px 0px;
+    text-transform: uppercase;
+    text-decoration: underline grey 2px;
+    text-underline-offset: 1rem;
+    border: 1px solid transparent;
+    animation: slidedown 9s infinite;
+    overflow: hidden;
+    transition: transform 1s ease-in-out;
+}
+
+
+@keyframes slidedown {
+    0% {
+        transform: translateY(-25%);
+    }
+    50% {
+        transform: translateY(0%);
+    }
+    100% {
+        transform: translateY(-25%);
+    }
+}
+
+.projects a {
+    width: 100%;
+    align-items: center;
+    justify-content:center;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    margin: 0;
+    gap: 1rem;
+    color: #f3faaf;
+    font-family: sen;
+    text-decoration: none;
+}
+.projects img {
+    width: 60%;
+    border: 2px solid rgb(48, 47, 47);
+    box-shadow: 0 0 10px  white ;
+}
+.projects h3 {
+    color: white;
+    background: #1c1b1b;
+    padding: 10px 30px;
+    border-radius: 40px;
+    border: 1px solid rgb(108, 107, 107);
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.projects h3:hover {
+    box-shadow: 0px 0px 10px white;
+    animation: slidedown 9s infinite;
+    border: 2px solid black;
+    background: #000000;
+}
+.projects span {
+    margin-top: 10px;
+    color: white;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+span p {
+    width: 80%;
+    font-size: larger;
+    font-family: sen;
+    text-align: justify;
+}
+span h4 {
+    font: 1.4em serif;
+    width: 80%;
+}
+
+/* Section styling */
+section {
+    padding: 20px 0;
+    
+}
+
+/* Skills section styling */
+
+#skills {
+    display: flex;
+    width: 100%;
+    height: auto;
+    
+}
+#skills h2 {
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-decoration-color: #a15414;
+    text-underline-offset: 4px;
+    display: flex;
+    justify-content: center;
+}
+.icons {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 30px;
+}
+#skills ul {
+    list-style: none;
+    text-align: center;
+    padding-top: 30px;
+}
+
+#skills ul li {
+    display: inline-block;
+    margin: 10px 10px;
+    font-size: 18px;
+    background: #ddd;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+/* Portfolio section styling */
+#portfolio {
+    position: relative;
+    z-index: 1;
+    background-color: #f3faaf;
+    padding: 32px 0;
+    height: auto;
+}
+@keyframes zoomDown {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.portfolio-items {
+    display: flex;
+    margin-top: 30px;
+    justify-content: space-between;
+    gap: 20px; /* Adjust the gap as needed */
+}
+
+.portfolio-item {
+    background: #fff;
+    height: 80%;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    width: calc(33.333% - 30px); /* Adjust width and spacing as needed */
+    box-sizing: border-box;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 30px;
+    text-align: center;
+    height: 350px;
+    animation: zoomDown 1.5s ease forwards;
+    transform: scale(1.5);
+}
+
+
+.port {
+    font-family: Sen,sans-srif;
+    font-size: 1.1rem;
+    line-height: 1.9;
+    letter-spacing: 1.5px;
+    padding: 60px 90px;
+    margin-left: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-indent: -1.4em;
+    width: 70%;
+}
+
+img {
+    width: 85%;
+    height: 70%;
+    
+}
+#portfolio h2 {
+    width: 100%;
+    align-items: center;
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-decoration-color: #a15414;
+    text-underline-offset: 6px;
+    justify-content: center;
+    display: flex;
+    padding-top: 20px;
+    
+}
+
+.portfolio-item a {
+    color: #185797;
+    text-decoration: none;
+    padding: 30px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    transition: transform 0.2s ease-in-out;
+    animation: pulse 2s infinite;
+    font-family: serif;
+    font-weight: bold;
+}
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+.portfolio-item a:hover {
+    color: #972f18;
+}
+.portfolio-item a i {
+    padding-left: 10px;
+}
+
+#contact {
+    background-color: white;
+    width: 100%;
+    overflow: hidden;
+    height: 500px;
+    display: flex;
+    position: sticky;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 0;
+}
+
+#contact h2 {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+/* Contact form styling */
+  
+form {
+    display: block;
+    width: 60%;
+    flex-direction: column;
+    align-items: center;
+    position: sticky;
+    bottom: 0;
+    top: 0;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 0.938rem;
+    border: 1px solid rgb(107, 198, 243);
+    border-radius: 5px;
+    box-shadow: 1px 3px 10px rgb(107, 198, 243)
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    width: 100%;
+    font-weight: bold;
+    color: #185797;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px 0px 10px 10px;
+    border: 1px solid rgb(76, 164, 208);
+    border-radius: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+form button {
+    padding: 10px 20px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #185797;
+   border: 2px solid #185797;
+}
+
+form button:hover {
+    background: #555;
+}
+
+.socials {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    right: 1%;
+    bottom: 50%;
+    gap: 0.5rem;
+    z-index: 100;
+    overflow: hidden;
+}
+
+/* Footer styling */
+footer {
+    background-color: #b8e3f1b4;
+    display: flex;
+    color: #000000;
+    text-align: center;
+    padding: 10px;
+}
+
+* Media Queries */
+
+/* Styles for tablets */
+@media (min-width: 600px) and (max-width: 1024px) {
+    .container {
+        width: 90%;
+    }
+
+    nav ul {
+        gap: 1rem;
+    }
+
+    .intro {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .me, .aboutme {
+        width: 100%;
+        padding-inline-start: 0;
+    }
+
+    .aboutme {
+        margin-right: 0;
+        box-shadow: none;
+    }
+
+    #skills {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .icons {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    #portfolio h2, #skills h2 {
+        font-size: 1.25em;
+    }
+
+    .portfolio-items {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .portfolio-item {
+        width: 90%;
+        transform: scale(1);
+    }
+
+    form {
+        width: 80%;
+    }
+}
+
+/* Styles for mobile phones */
+@media (max-width: 480px) {
+    .container {
+        width: 100%;
+        padding: 0 ;
+        overflow-x: hidden;
+    }
+    
+
+    nav {
+        
+        align-items: flex-start;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    nav ul {
+        align-items: flex-start;
+        gap: 0.9rem;
+        overflow: hidden;
+        
+    }
+    * {
+        overflow-x: hidden;
+    }
+    nav li {
+        font-family: sen;
+    }
+
+    #about {
+        height: auto;
+    }
+
+    .intro {
+        flex-direction: column;
+        gap: 0rem;
+        overflow: hidden;
+        width: 100%;
+    }
+    .me {
+        margin-top: 50px;
+        padding-left: 0;
+    }
+
+    .me, .aboutme {
+        width: 80%;
+    }
+
+    .aboutme {
+        margin-right: 0;
+    }
+       
+
+    #skills {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        overflow: hidden;
+    }
+
+    .icons {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    #skills ul li {
+        font-size: 16px;
+        padding: 5px 10px;
+    }
+
+    #portfolio h2, #skills h2 {
+        font-size: 1em;
+    }
+
+    .portfolio-items {
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .portfolio-item {
+        width: 90%;
+        transform: scale(1);
+    }
+    .port {
+        font-size: 0.9rem;
+        margin: 0;
+        display: flex;
+        overflow: hidden;
+    }
+
+    form {
+        width: 90%;
+    }
+
+    .socials {
+        right: 2%;
+        bottom: 20%;
+        overflow: hidden;
+        width: 89%;
+        align-items: flex-end;
+    }
+}
