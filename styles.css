@@ -255,6 +255,18 @@ span h4 {
     font: 1.4em serif;
     width: 80%;
 }
+.lists {
+    padding: 20px 40px;
+    color: #e5f6f8;
+    font-size: 1.2rem;
+    font-family: sen;
+    text-align: justify;
+    line-height: ;
+}
+.lists li {
+    line-height: 2;
+    font-size: 1rem;
+}
 
 /* Section styling */
 section {
@@ -322,7 +334,7 @@ img {
     background-color: white;
     width: 100%;
     overflow: hidden;
-    height: 500px;
+    height: auto;
     display: flex;
     position: sticky;
     left: 0;
@@ -442,22 +454,8 @@ footer {
         gap: 20px;
     }
 
-    #portfolio h2, #skills h2 {
-        font-size: 1.25em;
-    }
-
-    .portfolio-items {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .portfolio-item {
-        width: 90%;
-        transform: scale(1);
-    }
-
     form {
-        width: 80%;
+        width: 90%;
     }
 }
 
@@ -554,25 +552,50 @@ footer {
     }
     #projects p {
         width: 100%;
+        padding: 0 30px;
     }
 
     #projects h4  {
-        font-size: 23px;
+        font-size: 20px;
         width: 100%;
         display: flex;
         flex-direction: row;
+        padding: 15px 0px 15px 30px;
+       
     }
 
     #projects h4 i {
        font-size: 25px;
+       padding: 0 10px;
+    }
+    .lists {
+        width: 100%;
+        padding: 0;
+        font-size: 1rem;
+    }
+    .lists li {
+        position: relative;
+        padding-left: 0px;
+        padding-right: 10px;
+        margin-bottom: 0px;
+    } 
+    .lists li::before {
+        content: '✔️';
+        position: absolute;
+        left: 0;
+        font-size: 14px;
     }
     form {
-        width: 80%;
+        width: 90%;
         position: sticky;
         top: 0;
         bottom: 0;
         left: 0;
         z-index: 0;
+        height: auto;
+    }
+    #contact {
+        height: auto;
     }
 
     .socials {
